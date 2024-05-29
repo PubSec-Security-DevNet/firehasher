@@ -17,7 +17,7 @@ FROM ubuntu:22.04
 #
 
 LABEL version="1.0"
-LABEL description="XDR Feed MD5 Service"
+LABEL description="Firehasher: Feed URL MD5 Hasher"
 LABEL maintainer="nciesins@cisco.com"
 
 ENV PYTHONDONTWRITEBYTECODE 1
