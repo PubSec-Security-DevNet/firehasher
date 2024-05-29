@@ -38,9 +38,6 @@ RUN apt-get update \
 WORKDIR /app
 
 COPY requirements.txt .
-#COPY static ./static
-#COPY templates ./templates
-#COPY docker ./docker
 COPY app.py .
 COPY config.yaml .
 
@@ -70,7 +67,6 @@ RUN pip install --no-cache-dir -r requirements.txt && \
     echo "./init.sh" >> run.sh && \
     echo "sed -i '/.\/init.sh/{N;d;}' ./run.sh" >> run.sh && \
     echo "nginx -g 'daemon off;' &" >> run.sh && \
-    echo "echo madvise > /sys/kernel/mm/transparent_hugepage/enabled" >> run.sh && \
     echo "redis-server &" >> run.sh && \
     echo "gunicorn --preload --workers=4 --bind 0.0.0.0:8000 app:app" >> run.sh
     

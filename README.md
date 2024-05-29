@@ -17,6 +17,9 @@ An example of a feed service that does not provide an MD5 hash URL is the Cisco 
     -  *Note, this will expose the Firehasher MD5 URL on port 80, if you need to change the port change the -p line.  Example to use port 8888: `-p 8888:80/tcp`*
 5. Go into your Cisco Secure Firewall Threat Intelligence Feed configuration and add the MD5 URL. `http://<hostname running docker container>/feed/<feedname>`
 
+Depending on the host OS and its settings you may see a performance warning in the docker logs regarding transparent hugepages being enabled when Docker starts redis.  
+To solve this from the host that is hosting the Docker container run `echo madvise > /sys/kernel/mm/transparent_hugepage/enabled`.
+
 ## Author
 
 - Nick Ciesinski
