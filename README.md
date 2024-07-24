@@ -6,7 +6,7 @@ When utilizing Cisco Secure Firewall alongside Threat Intelligence Feeds, an MD5
 
 Some threat intelligence services, both public and private, may not offer an MD5 hash URL, which restricts the minimum update interval to 30 minutes. Firehasher addresses this limitation; it is a Docker container that initiates a simple process to poll feeds lacking an MD5 hash URL every 60 seconds and generates an MD5 hash from the obtained data. The container then makes this MD5 hash available through a URL, which can be integrated into the configuration of the Threat Intelligence Feed in Cisco Secure Firewall.
 
-An example of a feed service that does not provide an MD5 hash URL is the Cisco Extended Detection and Response (XDR).
+An example of a feed service that does not provide an MD5 hash URL is Cisco Extended Detection and Response (XDR).
 
 ## Installation
 

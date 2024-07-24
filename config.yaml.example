@@ -1,4 +1,4 @@
-# For each feed in XDR engter a name and url row below.  There is no limit to the number of feeds 
+# For each feed in XDR enter a name and url row below.  There is no limit to the number of feeds 
 # you can have in the configuration.  The name is the name you will enter in the URL to show the current
 # MD5 value of thr feeds content.
 feeds:
@@ -7,8 +7,8 @@ feeds:
   - name: feed2
     url: https://urltofeed2.example.com
 
-# Enable or disable SSL verification of the source feed.  If you point to a custom feed URL that don't have a trusted
-# CA set to False, otherwise its safe to leave setting at True.
+# Enable or disable SSL verification of the source feed.  If you point to a custom feed URL that doesn't have a trusted
+# CA, set to False, otherwise its safe to leave setting at True.
 ssl:
   verify: True
 
